@@ -1,0 +1,15 @@
+$primary: #c90707;
+$secondary: #ffffff;
+$cor-texto: #666666;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+);
+
+$custom-colors: (
+  "orange": orange,
+  "royalblue": royalblue,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
