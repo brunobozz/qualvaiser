@@ -8,7 +8,7 @@ import { PageUsuariosComponent } from './pages/page-usuarios/page-usuarios.compo
 import { PageVotacaoComponent } from './pages/page-votacao/page-votacao.component';
 
 const routes: Routes = [
-  { path: '', component: PageRestaurantesComponent },
+  { path: '', component: PageInicioComponent },
   { path: 'home', component: PageInicioComponent },
   { path: 'resultado', component: PageResultadoComponent },
   { path: 'votacao', component: PageVotacaoComponent },

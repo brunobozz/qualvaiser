@@ -21,4 +21,8 @@ export class PageVotacaoComponent implements OnInit {
       this.RESTAURANTES = data;
     });
   }
+
+  votar(id:number){
+    console.log(id);
+  }
 }
