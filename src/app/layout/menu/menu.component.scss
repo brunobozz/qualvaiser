@@ -14,7 +14,7 @@
   .pages {
     .btn {
       i {
-        margin-right: 7px;
+        margin-right: 10px;
       }
     }
   }
@@ -32,7 +32,8 @@
 
 @media (max-width: 600px) {
   .menu {
-    left: -300px;
+    width: 240px;
+    left: -240px;
   }
 
   .is-open {

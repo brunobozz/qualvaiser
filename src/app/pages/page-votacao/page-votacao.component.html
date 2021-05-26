@@ -1,1 +1,10 @@
-<p>page-votacao works!</p>
+<section class="m-4">
+    <h2>Votação</h2>
+    <p>Vote no restaurante que você quer almoçar hoje!</p>
+    <div *ngFor="let restaura of RESTAURANTES" class="card mb-3">
+      <div class="card-body">
+        <h4>{{ restaura.nome }}</h4>
+      </div>
+    </div>
+  </section>
+  

@@ -1,1 +1,8 @@
-<p>page-restaurantes works!</p>
+<section class="m-4">
+  <h2>Restaurantes</h2>
+  <div *ngFor="let restaura of RESTAURANTES" class="card mb-3">
+    <div class="card-body">
+      <h4>{{ restaura.nome }}</h4>
+    </div>
+  </div>
+</section>
