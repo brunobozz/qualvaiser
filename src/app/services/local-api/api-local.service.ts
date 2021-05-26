@@ -12,8 +12,10 @@ export class ApiLocalService {
   constructor(private http: HttpClient) {}
 
   public getInfo(info: string): Observable<any> {
-    console.log(info);
     return this.http.get(this.apiUrl + info);
   }
 
+  // public registraVoto(id: number, voto) {
+  //   return this.http.put(this.apiUrl + 'restaurantes/' + id, voto)
+  // }
 }
