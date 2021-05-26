@@ -1,9 +1,9 @@
 <section class="m-4">
     <h2>Votação</h2>
-    <p>Vote no restaurante que você quer almoçar hoje!</p>
-    <div *ngFor="let restaura of RESTAURANTES" class="card mb-3">
-      <div class="card-body">
-        <h4>{{ restaura.nome }}</h4>
+    <p>Para votar clique no restaurante</p>
+    <div *ngFor="let restaurante of RESTAURANTES" class="card bg-light mb-3">
+      <div class="card-body" (click)="votar(restaurante.id)">
+        <h4>{{ restaurante.nome }}</h4>
       </div>
     </div>
   </section>
