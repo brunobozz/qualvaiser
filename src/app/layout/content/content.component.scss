@@ -1,0 +1,17 @@
+.content {
+  position: absolute;
+  top: 54px;
+  width: calc(100% - 300px);
+  left: 300px;
+  height: calc(100% - 54px);
+  overflow: hidden;
+  overflow-y: auto;
+  transition: 0.3s all ease-in-out;
+}
+
+@media (max-width: 600px) {
+  .content {
+    width: 100%;
+    left: 0;
+  }
+}

@@ -1,9 +1,41 @@
 .menu {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.8);
-  top: 0;
+  top: 54px;
   left: 0;
   width: 300px;
-  max-width: 80%;
-  height: 100%;
+  height: calc(100% - 54px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.3s all ease-in-out;
+  overflow: hidden;
+  z-index: 10;
+
+  .pages {
+    .btn {
+      i {
+        margin-right: 7px;
+      }
+    }
+  }
+
+  .user {
+    padding: 20px;
+
+    .btn {
+      i {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .menu {
+    left: -300px;
+  }
+
+  .is-open {
+    left: 0;
+  }
 }
