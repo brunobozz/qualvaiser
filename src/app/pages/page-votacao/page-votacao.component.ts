@@ -13,7 +13,6 @@ export class PageVotacaoComponent implements OnInit {
 
   ngOnInit(): void {
     this.getRestaurantes();
-    console.log(this.RESTAURANTES);
   }
 
   getRestaurantes() {
@@ -22,7 +21,12 @@ export class PageVotacaoComponent implements OnInit {
     });
   }
 
-  votar(id:number){
-    console.log(id);
+  votar(id: number) {
+    var Hoje = new Date();
+    Hoje.setDate(Hoje.getDate() - 1);
+    var Today = Hoje.toLocaleDateString();
+    console.log(Today);
+
+    // this.localApi.registraVoto(id);
   }
 }

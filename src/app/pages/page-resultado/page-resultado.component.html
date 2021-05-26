@@ -1,1 +1,12 @@
-<p>page-resultado works!</p>
+<section class="m-4">
+  <h2>Resultado</h2>
+  <ul class="list-group">
+    <li
+      *ngFor="let restaurante of RESTAURANTES"
+      class="list-group-item d-flex justify-content-between"
+    >
+      <span>{{ restaurante.nome }}</span>
+      <span>Votos: {{ restaurante.votos }}</span>
+    </li>
+  </ul>
+</section>
