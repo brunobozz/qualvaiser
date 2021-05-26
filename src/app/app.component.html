@@ -1,5 +1,5 @@
 <div>
-  <app-navbar></app-navbar>
-  <app-menu></app-menu>
-  <router-outlet></router-outlet>
+  <app-navbar [menu]="menu"></app-navbar>
+  <app-menu #menu></app-menu>
+  <app-content></app-content>
 </div>

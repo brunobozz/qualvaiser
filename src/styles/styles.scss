@@ -1,2 +1,6 @@
-@import './custom-bootstrap-theme';
-@import './node_modules/bootstrap/scss/bootstrap';
+@import "./custom-bootstrap-theme";
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+.text-left {
+  text-align: left !important;
+}

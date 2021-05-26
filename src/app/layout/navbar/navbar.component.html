@@ -1,9 +1,10 @@
 <nav class="navbar navbar-dark bg-primary">
-  <div class="container-fluid d-flex justify-content-between">
-      <button class="btn btn-primary">Menu</button>
-    <span class="navbar-brand mb-0 h1">Qualvaiser</span>
-    <button class="btn btn-outline-secondary">
-        U
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+    <button class="btn text-light btn-menu">
+      <i *ngIf="!isOpen" class="fa fa-bars" (click)="toggleMenu()"></i>
+      <i *ngIf="isOpen" class="fa fa-times" (click)="toggleMenu()"></i>
     </button>
+    <h2 class="navbar-brand">Qual Vai Ser?</h2>
+    <span></span>
   </div>
 </nav>

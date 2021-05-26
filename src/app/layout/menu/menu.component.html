@@ -1,11 +1,58 @@
-<section class="menu">
-    <section class="user text-center">
-        <h4>Bruno Bozz</h4>
+<section class="menu bg-light" [ngClass]="isOpen ? 'is-open' : 'is-close'">
+  <section>
+    <section
+      class="menu-header navbar container d-flex justify-content-between"
+    ></section>
+    <section class="pages d-grid gap-2 container">
+      <button
+        class="btn btn-primary text-left"
+        routerLink="/home"
+        (click)="closeMenu()"
+      >
+        <i class="fa fa-home" aria-hidden="true"></i>
+        <span>Início</span>
+      </button>
+      <button
+        class="btn btn-secondary text-left"
+        routerLink="/votacao"
+        (click)="closeMenu()"
+      >
+        <i class="fa fa-check" aria-hidden="true"></i>
+        <span>Votação</span>
+      </button>
+      <button
+        class="btn btn-secondary text-left"
+        routerLink="/resultado"
+        (click)="closeMenu()"
+      >
+        <i class="fa fa-file-text" aria-hidden="true"></i>
+        <span>Resultado</span>
+      </button>
+      <button
+        class="btn btn-secondary text-left"
+        routerLink="/restaurantes"
+        (click)="closeMenu()"
+      >
+        <i class="fa fa-cutlery" aria-hidden="true"></i>
+        <span>Restaurantes</span>
+      </button>
+      <button
+        class="btn btn-secondary text-left"
+        routerLink="/usuarios"
+        (click)="closeMenu()"
+      >
+        <i class="fa fa-users" aria-hidden="true"></i>
+        <span>Usuários</span>
+      </button>
     </section>
-    <section class="pages">
-        <span class="item">Page 1</span>
-        <span class="item">Page 2</span>
-        <span class="item">Page 3</span>
-        <span class="item">Page 4</span>
-    </section>
+  </section>
+  <section class="user text-center">
+    <i class="fa fa-user-circle fa-3x" aria-hidden="true"></i>
+    <h4>Bruno Bozz</h4>
+    <p>brunobozz@gmail.com</p>
+    <button class="btn btn-primary btn-sm">
+      <i class="fa fa-sign-out" aria-hidden="true"></i>
+      <span>Sair</span>
+    </button>
+  </section>
 </section>
