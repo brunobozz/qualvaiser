@@ -1,15 +1,24 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiLocalService } from 'src/app/services/local-api/api-local.service';
 
 @Component({
   selector: 'app-page-votacao',
   templateUrl: './page-votacao.component.html',
-  styleUrls: ['./page-votacao.component.scss']
+  styleUrls: ['./page-votacao.component.scss'],
 })
 export class PageVotacaoComponent implements OnInit {
+  RESTAURANTES: any[] = [];
 
-  constructor() { }
+  constructor(private localApi: ApiLocalService) {}
 
   ngOnInit(): void {
+    this.getRestaurantes();
+    console.log(this.RESTAURANTES);
   }
 
+  getRestaurantes() {
+    this.localApi.getInfo('restaurantes').subscribe((data) => {
+      this.RESTAURANTES = data;
+    });
+  }
 }

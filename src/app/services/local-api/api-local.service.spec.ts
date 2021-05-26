@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { LocalApiService } from './local-api.service';
+import { ApiLocalService } from './api-local.service';
 
-describe('LocalApiService', () => {
-  let service: LocalApiService;
+describe('ApiLocalService', () => {
+  let service: ApiLocalService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(LocalApiService);
+    service = TestBed.inject(ApiLocalService);
   });
 
   it('should be created', () => {
