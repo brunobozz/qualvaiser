@@ -22,58 +22,58 @@
   "restaurantes": [
     {
       "id": 0,
-      "nome": "Pizza da Nona",
-      "votos": 0
+      "nome": "Pizza da Nona"
     },
     {
       "id": 1,
-      "nome": "Mc Donald's",
-      "votos": 0
+      "nome": "Mc Donald's"
     },
     {
       "id": 2,
-      "nome": "Xis do Lelê",
-      "votos": 1
+      "nome": "Xis do Lelêi"
     },
     {
       "id": 3,
-      "nome": "Podrão",
-      "votos": 2
+      "nome": "Podrão"
     },
     {
       "id": 4,
-      "nome": "Restaurante da Colônia",
-      "votos": 0
+      "nome": "Restaurante da Colônia"
     },
     {
       "id": 5,
-      "nome": "Outback",
-      "votos": 7
+      "nome": "Outback"
     },
     {
       "id": 6,
-      "nome": "Burger King",
-      "votos": 3
+      "nome": "Burger King"
     },
     {
       "id": 7,
-      "nome": "Subway",
-      "votos": 2
+      "nome": "Subway"
     },
     {
       "id": 8,
-      "nome": "Gelson",
-      "votos": 2
+      "nome": "Gelson"
     },
     {
       "id": 9,
-      "nome": "K-Recão Lanches",
-      "votos": 0
+      "nome": "K-Recão Lanches"
     },
     {
       "id": 8,
-      "nome": "Mama Mia",
-      "votos": 0
+      "nome": "Mama Mia"
+    },
+    {
+      "nome": "Xis da Nega",
+      "id": 10
+    },
+    {
+      "nome": "Espaço Maestro",
+      "id": 11
     }
+  ],
+  "votacao": [
+    
   ]
 }
