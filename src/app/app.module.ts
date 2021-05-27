@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 //LAYOUT
 import { NavbarComponent } from './layout/navbar/navbar.component';
@@ -18,7 +20,6 @@ import { PageUsuariosComponent } from './pages/page-usuarios/page-usuarios.compo
 
 //SERVICES
 import { ApiLocalService } from './services/local-api/api-local.service';
-import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { HttpClientModule } from '@angular/common/http';
     PageInicioComponent,
     PageUsuariosComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [ApiLocalService],
   bootstrap: [AppComponent],
 })

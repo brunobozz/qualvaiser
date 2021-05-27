@@ -25,8 +25,8 @@ export class PageVotacaoComponent implements OnInit {
     var Hoje = new Date();
     Hoje.setDate(Hoje.getDate() - 1);
     var Today = Hoje.toLocaleDateString();
-    console.log(Today);
+    console.log(id + " - " +Today);
 
-    // this.localApi.registraVoto(id);
+    // this.localApi.registraVoto(id)
   }
 }

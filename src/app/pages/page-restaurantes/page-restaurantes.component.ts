@@ -7,7 +7,9 @@ import { ApiLocalService } from 'src/app/services/local-api/api-local.service';
   styleUrls: ['./page-restaurantes.component.scss'],
 })
 export class PageRestaurantesComponent implements OnInit {
+  
   RESTAURANTES: any[] = [];
+  alertList = document.querySelectorAll('.alert')
 
   constructor(private localApi: ApiLocalService) {}
 
@@ -18,6 +20,18 @@ export class PageRestaurantesComponent implements OnInit {
   getRestaurantes() {
     this.localApi.getInfo('restaurantes').subscribe((data) => {
       this.RESTAURANTES = data;
+    });
+  }
+
+  addRestaurante(form: any) {
+    this.localApi.addRestaurant(form).subscribe(() => {
+      this.getRestaurantes();
+    });
+  }
+
+  deleteRestaurante(id: number) {
+    this.localApi.deleteItem(id).subscribe(() => {
+      this.getRestaurantes();
     });
   }
 

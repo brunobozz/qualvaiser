@@ -1,8 +1,54 @@
 <section class="m-4">
   <h2>Restaurantes</h2>
-  <div *ngFor="let restaura of RESTAURANTES" class="card mb-3">
-    <div class="card-body">
-      <h4>{{ restaura.nome }}</h4>
+
+  <form
+    #formRestaurante="ngForm"
+    (ngSubmit)="addRestaurante(formRestaurante.value)"
+  >
+    <div class="input-group mb-3">
+      <input
+        type="text"
+        class="form-control"
+        name="nome"
+        placeholder="Nome do Restaurante"
+        aria-describedby="adicionar"
+        ngModel
+      />
+      <button
+        class="btn btn-success text-light"
+        type="submit"
+        id="adicionar"
+        title="Adicionar"
+      >
+        <i class="fa fa-plus"></i>
+        <span> Adicionar</span>
+      </button>
     </div>
-  </div>
+  </form>
+
+  <ol class="list-group list-group-numbered">
+    <li
+      *ngFor="let restaura of RESTAURANTES"
+      class="list-group-item d-flex justify-content-between align-items-center"
+    >
+      <div class="ms-2 me-auto">
+        <div class="fw-bold">{{ restaura.nome }}</div>
+      </div>
+      <div class="d-flex">
+        <!-- <button
+          class="btn btn-sm btn-outline-primary m-2 mt-0 mb-0"
+          title="Editar"
+        >
+          <i class="fa fa-pencil"></i>
+        </button> -->
+        <button
+          class="btn btn-sm btn-primary"
+          title="Excluir"
+          (click)="deleteRestaurante(restaura.id)"
+        >
+          <i class="fa fa-trash"></i>
+        </button>
+      </div>
+    </li>
+  </ol>
 </section>

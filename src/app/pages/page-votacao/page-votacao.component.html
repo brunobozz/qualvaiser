@@ -1,10 +1,14 @@
 <section class="m-4">
-    <h2>Votação</h2>
-    <p>Para votar clique no restaurante</p>
-    <div *ngFor="let restaurante of RESTAURANTES" class="card bg-light mb-3">
-      <div class="card-body" (click)="votar(restaurante.id)">
-        <h4>{{ restaurante.nome }}</h4>
-      </div>
-    </div>
+  <h2>Votação</h2>
+  <p>Para votar clique no restaurante</p>
+
+  <section class="pages d-grid gap-2 container">
+    <button
+      *ngFor="let restaurante of RESTAURANTES"
+      class="btn btn-outline-primary text-left"
+      (click)="votar(restaurante.id)"
+    >
+      <span>{{ restaurante.nome }}</span>
+    </button>
   </section>
-  
+</section>

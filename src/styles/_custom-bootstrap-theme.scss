@@ -8,8 +8,10 @@ $theme-colors: (
 );
 
 $custom-colors: (
+  "success": rgb(55, 156, 85),
+  "danger": rgb(211, 79, 79),
   "orange": orange,
-  "royalblue": royalblue,
+  "info": rgb(45, 148, 216),
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
