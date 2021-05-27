@@ -27,7 +27,7 @@ export class PageRestaurantesComponent implements OnInit {
   }
 
   addRestaurante(form: any) {
-    this.localApi.addRestaurant(form).subscribe(() => {
+    this.localApi.postItem('restaurantes', form).subscribe(() => {
       this.getRestaurantes();
       this.toastr.success('Adicionado com sucesso!', form.nome);
     });

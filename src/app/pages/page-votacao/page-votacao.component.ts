@@ -21,52 +21,60 @@ export class PageVotacaoComponent implements OnInit {
     this.getVotacao();
   }
 
-  getRestaurantes() {
+  private getRestaurantes() {
     this.localApi.getInfo('restaurantes').subscribe((data) => {
       this.RESTAURANTES = data;
     });
   }
 
-  getVotacao() {
+  private getVotacao() {
     this.localApi.getInfo('votacao').subscribe((data) => {
       this.VOTACAO = data;
     });
   }
 
-  votar(nome: string, id: number) {
+  public votar(nome: string, id: number) {
+    this.getVotacao();
     let found = false;
+    let voto = 0;
+    let id_voto;
     if (this.VOTACAO != null) {
       for (var i = 0; i < this.VOTACAO.length; i++) {
-        if (this.VOTACAO[i].id_restaurante === id) {
+        if (this.VOTACAO[i].nome === nome) {
           found = true;
+          voto = this.VOTACAO[i].votos + 1;
+          id_voto = this.VOTACAO[i].id;
           break;
         }
       }
     }
 
     if (found) {
-      console.log('já tem');
-      // this.addVoto(id);
+      this.addVoto(nome, id_voto, voto);
     } else {
-      console.log('nao tem');
       this.criaVoto(nome, id);
     }
   }
 
-  criaVoto(nome: string, id: number) {
+  private criaVoto(nome: string, id: number) {
     let body = {
       id_restaurante: id,
       nome: nome,
       votos: 1,
     };
 
-    this.localApi.postVoto(body).subscribe((data) => {
+    this.localApi.postItem('votacao', body).subscribe(() => {
       this.toastr.success('Você votou no ' + nome, 'Feito!!');
     });
   }
 
-  addVoto() {
-    
+  private addVoto(nome: string, id: number, voto: number) {
+    let body = {
+      votos: voto,
+    };
+    this.localApi.patchItem('votacao', id, body).subscribe(() => {
+      this.toastr.success('Você votou no ' + nome, 'Feito!!');
+    });
   }
 }
 
