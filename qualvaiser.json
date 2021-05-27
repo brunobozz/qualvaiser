@@ -4,26 +4,28 @@
       "id": 0,
       "nome": "Bruno Bozz",
       "tipo": "adm",
+      "email": "brunobozz@gmail.com",
+      "senha": "12345",
       "data_voto": ""
     },
     {
       "id": 1,
       "nome": "Neymar Jr.",
       "tipo": "user",
+      "email": "neymarjr@terra.com.br",
+      "senha": "12345",
       "data_voto": ""
     },
     {
       "id": 2,
       "nome": "Ronaldinho Gaúcho",
       "tipo": "user",
+      "email": "ronaldinho@r10.com",
+      "senha": "12345",
       "data_voto": ""
     }
   ],
   "restaurantes": [
-    {
-      "id": 0,
-      "nome": "Pizza da Nona"
-    },
     {
       "id": 1,
       "nome": "Mc Donald's"
@@ -45,10 +47,6 @@
       "nome": "Outback"
     },
     {
-      "id": 6,
-      "nome": "Burger King"
-    },
-    {
       "id": 7,
       "nome": "Subway"
     },
@@ -67,19 +65,27 @@
     {
       "nome": "Espaço Maestro",
       "id": 11
+    },
+    {
+      "nome": "Burger King",
+      "id": 12
+    },
+    {
+      "nome": "Pizza da Nona",
+      "id": 13
     }
   ],
   "votacao": [
     {
       "id_restaurante": 6,
       "nome": "Burger King",
-      "votos": 1,
+      "votos": 5,
       "id": 1
     },
     {
       "id_restaurante": 0,
       "nome": "Pizza da Nona",
-      "votos": 1,
+      "votos": 3,
       "id": 2
     },
     {
@@ -87,6 +93,12 @@
       "nome": "Gelson",
       "votos": 1,
       "id": 3
+    },
+    {
+      "id_restaurante": 4,
+      "nome": "Restaurante da Colônia",
+      "votos": 1,
+      "id": 4
     }
   ]
 }

@@ -22,4 +22,8 @@ export class ApiLocalService {
   public postItem(info: string, data: any) {
     return this.http.post(this.apiUrl + info, data);
   }
+
+  public patchItem(info: string, id: number, data: any) {
+    return this.http.patch(this.apiUrl + info + '/' + id, data);
+  }
 }
