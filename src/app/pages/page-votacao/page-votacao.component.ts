@@ -60,14 +60,12 @@ export class PageVotacaoComponent implements OnInit {
       votos: 1,
     };
 
-    this.localApi.postVoto(body).subscribe((data) => {
+    this.localApi.postItem('votacao', body).subscribe((data) => {
       this.toastr.success('Você votou no ' + nome, 'Feito!!');
     });
   }
 
-  addVoto() {
-    
-  }
+  addVoto() {}
 }
 
 // var Hoje = new Date();

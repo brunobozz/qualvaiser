@@ -15,15 +15,11 @@ export class ApiLocalService {
     return this.http.get(this.apiUrl + info);
   }
 
-  public addRestaurant(data: any) {
-    return this.http.post(this.apiUrl + 'restaurantes', data);
-  }
-
   public deleteItem(id: number) {
     return this.http.delete(this.apiUrl + 'restaurantes/' + id);
   }
 
-  public postVoto(data: any) {
-    return this.http.post(this.apiUrl + "votacao", data);
+  public postItem(info: string, data: any) {
+    return this.http.post(this.apiUrl + info, data);
   }
 }
