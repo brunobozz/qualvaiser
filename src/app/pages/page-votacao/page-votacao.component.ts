@@ -46,7 +46,7 @@ export class PageVotacaoComponent implements OnInit {
 
     if (found) {
       console.log('já tem');
-      this.addVoto(id);
+      // this.addVoto(id);
     } else {
       console.log('nao tem');
       this.criaVoto(nome, id);
