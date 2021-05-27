@@ -23,8 +23,7 @@ export class ApiLocalService {
     return this.http.delete(this.apiUrl + 'restaurantes/' + id);
   }
 
-  public registraVoto(id: number) {
-    let body = '';
-    return this.http.put(this.apiUrl + 'restaurantes/' + id, body);
+  public postVoto(data: any) {
+    return this.http.post(this.apiUrl + "votacao", data);
   }
 }

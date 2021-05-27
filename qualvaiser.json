@@ -30,7 +30,7 @@
     },
     {
       "id": 2,
-      "nome": "Xis do Lelêi"
+      "nome": "Xis do Lelê"
     },
     {
       "id": 3,
@@ -61,11 +61,7 @@
       "nome": "K-Recão Lanches"
     },
     {
-      "id": 8,
-      "nome": "Mama Mia"
-    },
-    {
-      "nome": "Xis da Nega",
+      "nome": "Mama Mia",
       "id": 10
     },
     {
@@ -74,6 +70,17 @@
     }
   ],
   "votacao": [
-    
+    {
+      "id_restaurante": 6,
+      "nome": "Burger King",
+      "votos": 1,
+      "id": 1
+    },
+    {
+      "id_restaurante": 0,
+      "nome": "Pizza da Nona",
+      "votos": 1,
+      "id": 2
+    }
   ]
 }
