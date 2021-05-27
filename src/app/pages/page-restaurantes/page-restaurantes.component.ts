@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiLocalService } from 'src/app/services/local-api/api-local.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-page-restaurantes',
@@ -7,11 +8,13 @@ import { ApiLocalService } from 'src/app/services/local-api/api-local.service';
   styleUrls: ['./page-restaurantes.component.scss'],
 })
 export class PageRestaurantesComponent implements OnInit {
-  
   RESTAURANTES: any[] = [];
-  alertList = document.querySelectorAll('.alert')
+  alertList = document.querySelectorAll('.alert');
 
-  constructor(private localApi: ApiLocalService) {}
+  constructor(
+    private localApi: ApiLocalService,
+    private toastr: ToastrService
+  ) {}
 
   ngOnInit(): void {
     this.getRestaurantes();
@@ -26,13 +29,14 @@ export class PageRestaurantesComponent implements OnInit {
   addRestaurante(form: any) {
     this.localApi.addRestaurant(form).subscribe(() => {
       this.getRestaurantes();
+      this.toastr.success('Adicionado com sucesso!', form.nome);
     });
   }
 
-  deleteRestaurante(id: number) {
+  deleteRestaurante(id: number, restaurante: string) {
     this.localApi.deleteItem(id).subscribe(() => {
       this.getRestaurantes();
+      this.toastr.error('Excluído com sucesso!', restaurante);
     });
   }
-
 }

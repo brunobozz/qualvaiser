@@ -7,18 +7,18 @@ import { ApiLocalService } from 'src/app/services/local-api/api-local.service';
   styleUrls: ['./page-resultado.component.scss'],
 })
 export class PageResultadoComponent implements OnInit {
-  RESTAURANTES: any[] = [];
+  VOTACAO: any[] = [];
 
   constructor(private localApi: ApiLocalService) {}
 
   ngOnInit(): void {
-    this.getRestaurantes();
+    this.getVotacao();
   }
 
-  getRestaurantes() {
-    this.localApi.getInfo('restaurantes').subscribe((data) => {
-      this.RESTAURANTES = data;
-      this.RESTAURANTES.sort((a, b) => (a.votos > b.votos ? -1 : 1));
+  getVotacao() {
+    this.localApi.getInfo('votacao').subscribe((data) => {
+      this.VOTACAO = data;
+      this.VOTACAO.sort((a, b) => (a.votos > b.votos ? -1 : 1));
     });
   }
 }

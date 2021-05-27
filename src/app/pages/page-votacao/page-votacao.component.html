@@ -6,7 +6,7 @@
     <button
       *ngFor="let restaurante of RESTAURANTES"
       class="btn btn-outline-primary text-left"
-      (click)="votar(restaurante.id)"
+      (click)="votar(restaurante.nome, restaurante.id)"
     >
       <span>{{ restaurante.nome }}</span>
     </button>

@@ -1,12 +1,14 @@
 <section class="m-4">
   <h2>Resultado</h2>
-  <ul class="list-group">
+  <ol class="list-group list-group-numbered">
     <li
-      *ngFor="let restaurante of RESTAURANTES"
-      class="list-group-item d-flex justify-content-between"
+      *ngFor="let restaurante of VOTACAO"
+      class="list-group-item d-flex justify-content-between align-items-center"
     >
-      <span>{{ restaurante.nome }}</span>
-      <span>Votos: {{ restaurante.votos }}</span>
+      <div class="ms-2 me-auto">
+        <div class="fw-bold">{{ restaurante.nome }}</div>
+      </div>
+      <span class="fw-bold text-info">{{ restaurante.votos }} votos</span>
     </li>
-  </ul>
+  </ol>
 </section>
