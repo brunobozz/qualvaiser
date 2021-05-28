@@ -73,25 +73,29 @@
     {
       "nome": "Pizza da Nona",
       "id": 13
+    },
+    {
+      "nome": "Cenoura Pasteis",
+      "id": 14
     }
   ],
   "votacao": [
     {
       "id_restaurante": 6,
       "nome": "Burger King",
-      "votos": 5,
+      "votos": 7,
       "id": 1
     },
     {
       "id_restaurante": 0,
       "nome": "Pizza da Nona",
-      "votos": 3,
+      "votos": 5,
       "id": 2
     },
     {
       "id_restaurante": 8,
       "nome": "Gelson",
-      "votos": 1,
+      "votos": 3,
       "id": 3
     },
     {
@@ -99,6 +103,60 @@
       "nome": "Restaurante da Colônia",
       "votos": 1,
       "id": 4
+    },
+    {
+      "id_restaurante": 9,
+      "nome": "K-Recão Lanches",
+      "votos": 9,
+      "id": 5
+    },
+    {
+      "id_restaurante": 9,
+      "nome": "K-Recão Lanches",
+      "votos": 1,
+      "id": 6
+    },
+    {
+      "id_restaurante": 10,
+      "nome": "Mama Mia",
+      "votos": 6,
+      "id": 7
+    },
+    {
+      "id_restaurante": 5,
+      "nome": "Outback",
+      "votos": 2,
+      "id": 8
+    },
+    {
+      "id_restaurante": 11,
+      "nome": "Espaço Maestro",
+      "votos": 1,
+      "id": 9
+    },
+    {
+      "id_restaurante": 1,
+      "nome": "Mc Donald's",
+      "votos": 13,
+      "id": 10
+    },
+    {
+      "id_restaurante": 14,
+      "nome": "Cenoura Pasteis",
+      "votos": 2,
+      "id": 11
+    },
+    {
+      "id_restaurante": 2,
+      "nome": "Xis do Lelê",
+      "votos": 1,
+      "id": 12
+    },
+    {
+      "id_restaurante": 15,
+      "nome": "Habbibs",
+      "votos": 1,
+      "id": 13
     }
   ]
 }
