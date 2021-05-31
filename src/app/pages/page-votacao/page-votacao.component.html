@@ -1,5 +1,5 @@
 <section class="m-4">
-  <h2>Votação</h2>
+  <h2><i class="fa fa-check" aria-hidden="true"></i> Votação</h2>
 
   <section *ngIf="userVotoData != today" class="pages d-grid gap-2 container">
     <p>Para votar clique no restaurante</p>
@@ -14,9 +14,14 @@
 
   <section *ngIf="userVotoData === today">
     <div class="card">
-      <div class="card-header">Você já votou hoje!</div>
+      <div class="card-header">
+        <span class="fw-bold">Você já votou hoje!</span>
+      </div>
       <div class="card-body">
-        <span>O seu voto foi no restaurante {{ userVotoRestaurante }}</span>
+        <span
+          >O seu voto foi no restaurante
+          <span class="fw-bold text-info">{{ userVotoRestaurante }}</span></span
+        >
       </div>
     </div>
   </section>

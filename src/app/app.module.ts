@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { OrderModule } from 'ngx-order-pipe';
 import { ToastrModule } from 'ngx-toastr';
 
 //CORE
@@ -52,6 +53,7 @@ import { AccountService } from './account/shared/account.service';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    OrderModule,
     ToastrModule.forRoot({
       timeOut: 3000,
       positionClass: 'toast-bottom-right',

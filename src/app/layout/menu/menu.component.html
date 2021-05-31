@@ -5,44 +5,59 @@
     ></section>
     <section class="pages d-grid gap-2 container">
       <button
-        class="btn btn-primary text-left"
+        class="btn text-left"
+        [ngClass]="
+          menuSelecionado === '/home' ? 'btn-primary' : 'btn-secondary'
+        "
         routerLink="/home"
-        (click)="closeMenu()"
+        (click)="clickMenu('/home')"
       >
         <i class="fa fa-home" aria-hidden="true"></i>
         <span>Início</span>
       </button>
       <button
-        class="btn btn-secondary text-left"
+        class="btn text-left"
+        [ngClass]="
+          menuSelecionado === '/votacao' ? 'btn-primary' : 'btn-secondary'
+        "
         routerLink="/votacao"
-        (click)="closeMenu()"
+        (click)="clickMenu('/votacao')"
       >
         <i class="fa fa-check" aria-hidden="true"></i>
         <span>Votação</span>
       </button>
       <button
         *ngIf="userTipo === 'adm'"
-        class="btn btn-secondary text-left"
+        class="btn text-left"
+        [ngClass]="
+          menuSelecionado === '/resultado' ? 'btn-primary' : 'btn-secondary'
+        "
         routerLink="/resultado"
-        (click)="closeMenu()"
+        (click)="clickMenu('/resultado')"
       >
         <i class="fa fa-file-text" aria-hidden="true"></i>
         <span>Resultado</span>
       </button>
       <button
         *ngIf="userTipo === 'adm'"
-        class="btn btn-secondary text-left"
+        class="btn text-left"
+        [ngClass]="
+          menuSelecionado === '/restaurantes' ? 'btn-primary' : 'btn-secondary'
+        "
         routerLink="/restaurantes"
-        (click)="closeMenu()"
+        (click)="clickMenu('/restaurantes')"
       >
         <i class="fa fa-cutlery" aria-hidden="true"></i>
         <span>Restaurantes</span>
       </button>
       <button
         *ngIf="userTipo === 'adm'"
-        class="btn btn-secondary text-left"
+        class="btn text-left"
+        [ngClass]="
+          menuSelecionado === '/usuarios' ? 'btn-primary' : 'btn-secondary'
+        "
         routerLink="/usuarios"
-        (click)="closeMenu()"
+        (click)="clickMenu('/usuarios')"
       >
         <i class="fa fa-users" aria-hidden="true"></i>
         <span>Usuários</span>

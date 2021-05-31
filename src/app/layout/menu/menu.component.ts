@@ -10,6 +10,7 @@ export class MenuComponent implements OnInit {
   public userName = window.localStorage.getItem('userNome');
   public userEmail = window.localStorage.getItem('userEmail');
   public userTipo = window.localStorage.getItem('userTipo');
+  public menuSelecionado: string = '/home';
 
   constructor() {}
 
@@ -19,9 +20,10 @@ export class MenuComponent implements OnInit {
     this.isOpen = !this.isOpen;
   }
 
-  closeMenu() {
+  clickMenu(menu: string) {
     if (this.isOpen) {
       this.isOpen = !this.isOpen;
     }
+    this.menuSelecionado = menu;
   }
 }
