@@ -7,6 +7,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 
+//CORE
+import { ApplicationComponent } from './core/application/application.component';
+import { AuthenticationComponent } from './core/authentication/authentication.component';
+
 //LAYOUT
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { MenuComponent } from './layout/menu/menu.component';
@@ -21,6 +25,8 @@ import { PageUsuariosComponent } from './pages/page-usuarios/page-usuarios.compo
 
 //SERVICES
 import { ApiLocalService } from './services/local-api/api-local.service';
+import { LoginComponent } from './account/login/login.component';
+import { AccountService } from './account/shared/account.service';
 
 @NgModule({
   declarations: [
@@ -33,6 +39,9 @@ import { ApiLocalService } from './services/local-api/api-local.service';
     PageRestaurantesComponent,
     PageInicioComponent,
     PageUsuariosComponent,
+    LoginComponent,
+    ApplicationComponent,
+    AuthenticationComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,9 +52,11 @@ import { ApiLocalService } from './services/local-api/api-local.service';
     ToastrModule.forRoot({
       timeOut: 3000,
       positionClass: 'toast-bottom-right',
+      maxOpened: 2,
+      autoDismiss: true,
     }),
   ],
-  providers: [ApiLocalService],
+  providers: [ApiLocalService, AccountService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
