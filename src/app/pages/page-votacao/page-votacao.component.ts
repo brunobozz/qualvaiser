@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { ApiLocalService } from 'src/app/services/local-api/api-local.service';
 
@@ -10,6 +10,7 @@ import { ApiLocalService } from 'src/app/services/local-api/api-local.service';
 })
 export class PageVotacaoComponent implements OnInit {
   public RESTAURANTES: any[] = [];
+  private HISTORICO: any[] = [];
   private VOTACAO: any[] = [];
   public userId = window.localStorage.getItem('userId');
   public userVotoData = window.localStorage.getItem('userVotoData');
@@ -21,24 +22,32 @@ export class PageVotacaoComponent implements OnInit {
   constructor(
     private localApi: ApiLocalService,
     private toastr: ToastrService,
-    private router: Router,
-    private route: ActivatedRoute
+    private router: Router
   ) {}
 
   ngOnInit(): void {
     let hoje = new Date();
-    hoje.setDate(hoje.getDate() - 1);
+    hoje.setDate(hoje.getDate());
     this.today = hoje.toLocaleDateString();
-    console.log('hoje é ' + this.today);
-    console.log('votou em: ' + this.userVotoData);
 
+    this.getHistorico();
     this.getRestaurantes();
     this.getVotacao();
   }
 
   private getRestaurantes() {
     this.localApi.getInfo('restaurantes').subscribe((data) => {
-      this.RESTAURANTES = data;
+      this.RESTAURANTES = data.filter((data1: { id: any; }) => {
+        return !this.HISTORICO.some((data2) => {
+          return data1.id === data2.vencedor_id;
+        });
+      });
+    });
+  }
+
+  private getHistorico() {
+    this.localApi.getInfo('historico').subscribe((data) => {
+      this.HISTORICO = data;
     });
   }
 
@@ -62,9 +71,8 @@ export class PageVotacaoComponent implements OnInit {
         console.log('nao tem');
         this.criaVoto(nome, id);
       }
+      this.registraVotoUsuario(nome);
     }
-
-    this.registraVotoUsuario(nome);
   }
 
   private registraVotoUsuario(restaurante: string) {
@@ -76,6 +84,7 @@ export class PageVotacaoComponent implements OnInit {
       .patchItem('usuarios', Number(this.userId), body)
       .subscribe(() => {
         window.localStorage.setItem('userVotoData', this.today);
+        window.localStorage.setItem('userVotoRestaurante', restaurante);
         this.router.navigate(['/home']);
       });
   }

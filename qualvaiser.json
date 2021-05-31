@@ -33,8 +33,17 @@
       "tipo": "adm",
       "email": "rubens111@f1.com",
       "senha": "12345",
-      "voto_data": "",
-      "voto_restaurante": ""
+      "voto_data": "31/05/2021",
+      "voto_restaurante": "Subway"
+    },
+    {
+      "id": 4,
+      "nome": "Joanna da Silva Fraga",
+      "tipo": "user",
+      "email": "loiradodeserto@terra.com.br",
+      "senha": "12345",
+      "voto_data": "31/05/2021",
+      "voto_restaurante": "K-Recão Lanches"
     }
   ],
   "restaurantes": [
@@ -89,6 +98,42 @@
     {
       "nome": "Habbibs",
       "id": 16
+    },
+    {
+      "nome": "Papa Lanches",
+      "id": 17
+    },
+    {
+      "nome": "Belezuuura Pastéis",
+      "id": 18
+    },
+    {
+      "nome": "Prenda Minha",
+      "id": 19
+    },
+    {
+      "nome": "Barranco",
+      "id": 20
+    },
+    {
+      "nome": "20/9",
+      "id": 21
+    },
+    {
+      "nome": "Brother's Lanches",
+      "id": 22
+    },
+    {
+      "nome": "Petiskeira",
+      "id": 23
+    },
+    {
+      "nome": "Riversides",
+      "id": 24
+    },
+    {
+      "nome": "Madero",
+      "id": 25
     }
   ],
   "votacao": [
@@ -103,9 +148,61 @@
       "nome": "Xis do Lelê",
       "votos": 1,
       "id": 2
+    },
+    {
+      "id_restaurante": 4,
+      "nome": "Restaurante da Colônia",
+      "votos": 1,
+      "id": 3
+    },
+    {
+      "id_restaurante": 7,
+      "nome": "Subway",
+      "votos": 1,
+      "id": 4
+    },
+    {
+      "id_restaurante": 15,
+      "nome": "K-Recão Lanches",
+      "votos": 2,
+      "id": 5
     }
   ],
   "historico": [
-    {}
+    {
+      "data": "30/05/2021",
+      "vencedor_nome": "Outback",
+      "vencedor_id": 5
+    },
+    {
+      "data": "29/05/2021",
+      "vencedor_nome": "Pizza da Nona",
+      "vencedor_id": 13
+    },
+    {
+      "data": "28/05/2021",
+      "vencedor_nome": "Habbibs",
+      "vencedor_id": 16
+    },
+    {
+      "data": "27/05/2021",
+      "vencedor_nome": "Espaço Maestro",
+      "vencedor_id": 11
+    },
+    {
+      "data": "26/05/2021",
+      "vencedor_nome": "Burger King",
+      "vencedor_id": 12
+    },
+    {
+      "data": "25/05/2021",
+      "vencedor_nome": "Mama Mia",
+      "vencedor_id": 10
+    },
+    {
+      "data": "24/05/2021",
+      "vencedor_nome": "Cenoura Pasteis",
+      "vencedor_id": 14
+    }
   ]
 }
