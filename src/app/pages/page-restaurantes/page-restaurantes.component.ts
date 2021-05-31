@@ -34,7 +34,7 @@ export class PageRestaurantesComponent implements OnInit {
   }
 
   deleteRestaurante(id: number, restaurante: string) {
-    this.localApi.deleteItem(id).subscribe(() => {
+    this.localApi.deleteItem(id, 'restaurantes/').subscribe(() => {
       this.getRestaurantes();
       this.toastr.error('Excluído com sucesso!', restaurante);
     });

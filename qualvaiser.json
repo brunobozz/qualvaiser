@@ -23,6 +23,14 @@
       "email": "ronaldinho@r10.com",
       "senha": "12345",
       "data_voto": ""
+    },
+    {
+      "id": 3,
+      "nome": "Rubens Barrichello",
+      "tipo": "adm",
+      "email": "rubens111@f1.com",
+      "senha": "12345",
+      "data_voto": ""
     }
   ],
   "restaurantes": [
@@ -33,10 +41,6 @@
     {
       "id": 2,
       "nome": "Xis do Lelê"
-    },
-    {
-      "id": 3,
-      "nome": "Podrão"
     },
     {
       "id": 4,
@@ -123,7 +127,7 @@
     {
       "id_restaurante": 5,
       "nome": "Outback",
-      "votos": 5,
+      "votos": 6,
       "id": 8
     },
     {
@@ -135,7 +139,7 @@
     {
       "id_restaurante": 1,
       "nome": "Mc Donald's",
-      "votos": 14,
+      "votos": 15,
       "id": 10
     },
     {
@@ -147,7 +151,7 @@
     {
       "id_restaurante": 2,
       "nome": "Xis do Lelê",
-      "votos": 2,
+      "votos": 3,
       "id": 12
     },
     {
@@ -159,7 +163,7 @@
     {
       "id_restaurante": 3,
       "nome": "Podrão",
-      "votos": 4,
+      "votos": 5,
       "id": 14
     },
     {

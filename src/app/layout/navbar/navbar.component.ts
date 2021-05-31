@@ -11,8 +11,8 @@ import { MenuComponent } from '../menu/menu.component';
 export class NavbarComponent implements OnInit {
   @Input()
   menu: MenuComponent = new MenuComponent();
-  public userName = window.localStorage.getItem('user');
-  public userTipo = window.localStorage.getItem('token');
+  public userName = window.localStorage.getItem('userNome');
+  public userTipo = window.localStorage.getItem('userTipo');
 
   isOpen: boolean = false;
 

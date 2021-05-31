@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
   isOpen: boolean = false;
-  public userTipo = window.localStorage.getItem('token');
+  public userName = window.localStorage.getItem('userNome');
+  public userEmail = window.localStorage.getItem('userEmail');
+  public userTipo = window.localStorage.getItem('userTipo');
 
   constructor() {}
 
