@@ -9,18 +9,21 @@
 
     <h2 class="navbar-brand">Qual Vai Ser?</h2>
 
-    <div class="d-flex align-items-center">
+    <!-- <div class="d-flex align-items-center">
       <i class="fa fa-user-circle me-2 text-light"></i>
       <span class="text-light me-2">{{ userName }}</span>
       <span
         class="badge me-2"
-        [ngClass]="{'bg-success':userTipo === 'adm', 'bg-info': userTipo === 'user'}"
+        [ngClass]="{
+          'bg-success': userTipo === 'adm',
+          'bg-info': userTipo === 'user'
+        }"
         >{{ userTipo }}</span
       >
-      <button class="btn btn-sm btn-outline-secondary" (click)="logout()">
-        <i class="fa fa-sign-out"></i>
-        <span> Sair</span>
-      </button>
-    </div>
+    </div> -->
+    <button class="btn btn-sm btn-secondary" (click)="logout()">
+      <i class="fa fa-sign-out"></i>
+      <span> Sair</span>
+    </button>
   </div>
 </nav>

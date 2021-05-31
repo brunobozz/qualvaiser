@@ -34,9 +34,15 @@ export class PageRestaurantesComponent implements OnInit {
   }
 
   deleteRestaurante(id: number, restaurante: string) {
-    this.localApi.deleteItem(id).subscribe(() => {
-      this.getRestaurantes();
-      this.toastr.error('Excluído com sucesso!', restaurante);
-    });
+    if (
+      confirm(
+        'Tem certeza que deseja apagar o restaurante ' + restaurante + '?'
+      )
+    ) {
+      this.localApi.deleteItem(id, 'restaurantes/').subscribe(() => {
+        this.getRestaurantes();
+        this.toastr.error('Excluído com sucesso!', restaurante);
+      });
+    }
   }
 }

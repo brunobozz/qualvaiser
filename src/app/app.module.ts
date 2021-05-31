@@ -9,6 +9,7 @@ import { ToastrModule } from 'ngx-toastr';
 
 //CORE
 import { ApplicationComponent } from './core/application/application.component';
+import { LoginComponent } from './account/login/login.component';
 import { AuthenticationComponent } from './core/authentication/authentication.component';
 
 //LAYOUT
@@ -25,23 +26,25 @@ import { PageUsuariosComponent } from './pages/page-usuarios/page-usuarios.compo
 
 //SERVICES
 import { ApiLocalService } from './services/local-api/api-local.service';
-import { LoginComponent } from './account/login/login.component';
 import { AccountService } from './account/shared/account.service';
 
 @NgModule({
   declarations: [
     AppComponent,
+    //CORE
+    ApplicationComponent,
+    LoginComponent,
+    AuthenticationComponent,
+    //LAYOUT
     NavbarComponent,
     MenuComponent,
     ContentComponent,
+    //PAGES
     PageResultadoComponent,
     PageVotacaoComponent,
     PageRestaurantesComponent,
     PageInicioComponent,
     PageUsuariosComponent,
-    LoginComponent,
-    ApplicationComponent,
-    AuthenticationComponent,
   ],
   imports: [
     BrowserModule,

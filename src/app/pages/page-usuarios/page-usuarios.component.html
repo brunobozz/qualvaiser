@@ -1,1 +1,38 @@
-<p>page-usuarios works!</p>
+<section class="m-4">
+  <h2>Usuários</h2>
+
+  <ol class="list-group">
+    <li
+      *ngFor="let user of USERS"
+      class="list-group-item d-flex justify-content-between align-items-center"
+    >
+      <div class="me-auto">
+        <span class="fw-bold">{{ user.nome }}</span>
+        <span
+          class="badge ms-2"
+          [ngClass]="{
+            'bg-success': user.tipo === 'adm',
+            'bg-info': user.tipo === 'user'
+          }"
+          >{{ user.tipo }}</span
+        ><span class=""></span>
+      </div>
+      <div class="d-flex">
+        <!-- <button
+            class="btn btn-sm btn-outline-primary m-2 mt-0 mb-0"
+            title="Editar"
+          >
+            <i class="fa fa-pencil"></i>
+          </button> -->
+        <button
+          *ngIf="user.email != userEmail"
+          class="btn btn-sm btn-primary"
+          title="Excluir"
+          (click)="deleteUser(user.id, user.nome)"
+        >
+          <i class="fa fa-trash"></i>
+        </button>
+      </div>
+    </li>
+  </ol>
+</section>

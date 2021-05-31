@@ -15,8 +15,8 @@ export class ApiLocalService {
     return this.http.get(this.apiUrl + info);
   }
 
-  public deleteItem(id: number) {
-    return this.http.delete(this.apiUrl + 'restaurantes/' + id);
+  public deleteItem(id: number, onde: string) {
+    return this.http.delete(this.apiUrl + onde + id);
   }
 
   public postItem(info: string, data: any) {
@@ -26,4 +26,5 @@ export class ApiLocalService {
   public patchItem(info: string, id: number, data: any) {
     return this.http.patch(this.apiUrl + info + '/' + id, data);
   }
+  
 }
