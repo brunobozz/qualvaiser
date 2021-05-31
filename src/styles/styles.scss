@@ -1,6 +1,11 @@
 @import "./custom-bootstrap-theme";
 @import "./node_modules/bootstrap/scss/bootstrap";
 
+html,
+body {
+  height: 100%;
+}
+
 .text-left {
   text-align: left !important;
 }

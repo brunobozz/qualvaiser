@@ -55,10 +55,6 @@
       "nome": "Gelson"
     },
     {
-      "id": 9,
-      "nome": "K-Recão Lanches"
-    },
-    {
       "nome": "Mama Mia",
       "id": 10
     },
@@ -77,79 +73,81 @@
     {
       "nome": "Cenoura Pasteis",
       "id": 14
+    },
+    {
+      "nome": "K-Recão Lanches",
+      "id": 15
+    },
+    {
+      "nome": "Habbibs",
+      "id": 16
     }
   ],
   "votacao": [
     {
       "id_restaurante": 6,
       "nome": "Burger King",
-      "votos": 7,
+      "votos": 8,
       "id": 1
     },
     {
       "id_restaurante": 0,
       "nome": "Pizza da Nona",
-      "votos": 5,
+      "votos": 8,
       "id": 2
     },
     {
       "id_restaurante": 8,
       "nome": "Gelson",
-      "votos": 3,
+      "votos": 5,
       "id": 3
     },
     {
       "id_restaurante": 4,
       "nome": "Restaurante da Colônia",
-      "votos": 1,
+      "votos": 3,
       "id": 4
     },
     {
       "id_restaurante": 9,
       "nome": "K-Recão Lanches",
-      "votos": 9,
+      "votos": 19,
       "id": 5
-    },
-    {
-      "id_restaurante": 9,
-      "nome": "K-Recão Lanches",
-      "votos": 1,
-      "id": 6
     },
     {
       "id_restaurante": 10,
       "nome": "Mama Mia",
-      "votos": 6,
+      "votos": 9,
       "id": 7
     },
     {
       "id_restaurante": 5,
       "nome": "Outback",
-      "votos": 2,
+      "votos": 5,
       "id": 8
     },
     {
       "id_restaurante": 11,
       "nome": "Espaço Maestro",
-      "votos": 1,
+      "votos": 6,
       "id": 9
     },
     {
       "id_restaurante": 1,
       "nome": "Mc Donald's",
-      "votos": 13,
+      "votos": 14,
       "id": 10
     },
     {
       "id_restaurante": 14,
       "nome": "Cenoura Pasteis",
-      "votos": 2,
+      "votos": 3,
       "id": 11
     },
     {
       "id_restaurante": 2,
       "nome": "Xis do Lelê",
-      "votos": 1,
+      "votos": 2,
       "id": 12
     },
     {
@@ -157,6 +155,18 @@
       "nome": "Habbibs",
       "votos": 1,
       "id": 13
+    },
+    {
+      "id_restaurante": 3,
+      "nome": "Podrão",
+      "votos": 4,
+      "id": 14
+    },
+    {
+      "id_restaurante": 7,
+      "nome": "Subway",
+      "votos": 4,
+      "id": 15
     }
   ]
 }
