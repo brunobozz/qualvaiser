@@ -1,8 +1,8 @@
 <section class="m-4">
   <h2>Votação</h2>
-  <p>Para votar clique no restaurante</p>
 
-  <section class="pages d-grid gap-2 container">
+  <section *ngIf="userVotoData != today" class="pages d-grid gap-2 container">
+    <p>Para votar clique no restaurante</p>
     <button
       *ngFor="let restaurante of RESTAURANTES"
       class="btn btn-outline-primary text-left"
@@ -10,5 +10,14 @@
     >
       <span>{{ restaurante.nome }}</span>
     </button>
+  </section>
+
+  <section *ngIf="userVotoData === today">
+    <div class="card">
+      <div class="card-header">Você já votou hoje!</div>
+      <div class="card-body">
+        <span>O seu voto foi no restaurante {{ userVotoRestaurante }}</span>
+      </div>
+    </div>
   </section>
 </section>

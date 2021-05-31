@@ -11,8 +11,10 @@ export class PageUsuariosComponent implements OnInit {
   USERS: any[] = [];
   public userEmail = window.localStorage.getItem('userEmail');
 
-  constructor(private localApi: ApiLocalService,
-    private toastr: ToastrService) {}
+  constructor(
+    private localApi: ApiLocalService,
+    private toastr: ToastrService
+  ) {}
 
   ngOnInit(): void {
     this.getUsuarios();
@@ -25,10 +27,11 @@ export class PageUsuariosComponent implements OnInit {
   }
 
   deleteUser(id: number, nome: string) {
-    this.localApi.deleteItem(id, 'usuarios/').subscribe(() => {
-      this.getUsuarios();
-      this.toastr.error('Excluído com sucesso!', nome);
-    });
+    if (confirm('Tem certeza que deseja remover o usuário ' + nome + '?')) {
+      this.localApi.deleteItem(id, 'usuarios/').subscribe(() => {
+        this.getUsuarios();
+        this.toastr.error('Excluído com sucesso!', nome);
+      });
+    }
   }
-
 }

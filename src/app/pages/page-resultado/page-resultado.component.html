@@ -11,4 +11,20 @@
       <span class="fw-bold text-info">{{ restaurante.votos }} votos</span>
     </li>
   </ol>
+  <div class="text-end">
+    <button
+      *ngIf="VOTACAO.length > 0"
+      class="btn btn-primary mt-2 me-2"
+      (click)="finalizarVotacao()"
+    >
+      Finalizar Votação
+    </button>
+    <button
+      *ngIf="VOTACAO.length > 0"
+      class="btn btn-primary mt-2"
+      (click)="zerarVotacao()"
+    >
+      Zerar Votação
+    </button>
+  </div>
 </section>

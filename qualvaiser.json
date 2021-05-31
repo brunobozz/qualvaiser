@@ -6,7 +6,8 @@
       "tipo": "adm",
       "email": "brunobozz@gmail.com",
       "senha": "12345",
-      "data_voto": ""
+      "voto_data": "30/05/2021",
+      "voto_restaurante": "Mc Donald's"
     },
     {
       "id": 1,
@@ -14,7 +15,8 @@
       "tipo": "user",
       "email": "neymarjr@terra.com.br",
       "senha": "12345",
-      "data_voto": ""
+      "voto_data": "",
+      "voto_restaurante": ""
     },
     {
       "id": 2,
@@ -22,7 +24,8 @@
       "tipo": "user",
       "email": "ronaldinho@r10.com",
       "senha": "12345",
-      "data_voto": ""
+      "voto_data": "",
+      "voto_restaurante": ""
     },
     {
       "id": 3,
@@ -30,7 +33,8 @@
       "tipo": "adm",
       "email": "rubens111@f1.com",
       "senha": "12345",
-      "data_voto": ""
+      "voto_data": "",
+      "voto_restaurante": ""
     }
   ],
   "restaurantes": [
@@ -89,88 +93,19 @@
   ],
   "votacao": [
     {
-      "id_restaurante": 6,
-      "nome": "Burger King",
-      "votos": 8,
-      "id": 1
-    },
-    {
-      "id_restaurante": 0,
-      "nome": "Pizza da Nona",
-      "votos": 8,
-      "id": 2
-    },
-    {
-      "id_restaurante": 8,
-      "nome": "Gelson",
-      "votos": 5,
-      "id": 3
-    },
-    {
-      "id_restaurante": 4,
-      "nome": "Restaurante da Colônia",
-      "votos": 3,
-      "id": 4
-    },
-    {
-      "id_restaurante": 9,
-      "nome": "K-Recão Lanches",
-      "votos": 19,
-      "id": 5
-    },
-    {
-      "id_restaurante": 10,
-      "nome": "Mama Mia",
-      "votos": 9,
-      "id": 7
-    },
-    {
-      "id_restaurante": 5,
-      "nome": "Outback",
-      "votos": 6,
-      "id": 8
-    },
-    {
-      "id_restaurante": 11,
-      "nome": "Espaço Maestro",
-      "votos": 6,
-      "id": 9
-    },
-    {
       "id_restaurante": 1,
       "nome": "Mc Donald's",
-      "votos": 15,
-      "id": 10
-    },
-    {
-      "id_restaurante": 14,
-      "nome": "Cenoura Pasteis",
-      "votos": 3,
-      "id": 11
+      "votos": 7,
+      "id": 1
     },
     {
       "id_restaurante": 2,
       "nome": "Xis do Lelê",
-      "votos": 3,
-      "id": 12
-    },
-    {
-      "id_restaurante": 15,
-      "nome": "Habbibs",
       "votos": 1,
-      "id": 13
-    },
-    {
-      "id_restaurante": 3,
-      "nome": "Podrão",
-      "votos": 5,
-      "id": 14
-    },
-    {
-      "id_restaurante": 7,
-      "nome": "Subway",
-      "votos": 4,
-      "id": 15
+      "id": 2
     }
+  ],
+  "historico": [
+    {}
   ]
 }
