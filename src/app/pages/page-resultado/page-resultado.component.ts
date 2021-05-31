@@ -9,6 +9,7 @@ import { ApiLocalService } from 'src/app/services/local-api/api-local.service';
 })
 export class PageResultadoComponent implements OnInit {
   VOTACAO: any[] = [];
+  public today: string = '';
 
   constructor(
     private localApi: ApiLocalService,
@@ -16,7 +17,14 @@ export class PageResultadoComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.dia();
     this.getVotacao();
+  }
+
+  private dia() {
+    let hoje = new Date();
+    hoje.setDate(hoje.getDate());
+    this.today = hoje.toLocaleDateString();
   }
 
   getVotacao() {
@@ -36,6 +44,16 @@ export class PageResultadoComponent implements OnInit {
   }
 
   public finalizarVotacao() {
-    console.log('terminar');
+    if (this.VOTACAO.length != 0) {
+      let data = {
+        data_almoco: this.today,
+        vencedor_nome: this.VOTACAO[0].nome,
+        vencedor_id: this.VOTACAO[0].id_restaurante,
+      };
+
+      this.localApi.postItem('historico', data).subscribe(() => {
+        this.zerarVotacao();
+      });
+    }
   }
 }

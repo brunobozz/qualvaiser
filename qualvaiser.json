@@ -7,7 +7,7 @@
       "email": "brunobozz@gmail.com",
       "senha": "12345",
       "voto_data": "31/05/2021",
-      "voto_restaurante": "Subway"
+      "voto_restaurante": "Habbibs"
     },
     {
       "id": 1,
@@ -15,8 +15,8 @@
       "tipo": "user",
       "email": "neymarjr@terra.com.br",
       "senha": "12345",
-      "voto_data": "",
-      "voto_restaurante": ""
+      "voto_data": "31/05/2021",
+      "voto_restaurante": "Mc Donald's"
     },
     {
       "id": 2,
@@ -24,8 +24,8 @@
       "tipo": "user",
       "email": "ronaldinho@r10.com",
       "senha": "12345",
-      "voto_data": "",
-      "voto_restaurante": ""
+      "voto_data": "31/05/2021",
+      "voto_restaurante": "Habbibs"
     },
     {
       "id": 3,
@@ -34,7 +34,7 @@
       "email": "rubens111@f1.com",
       "senha": "12345",
       "voto_data": "31/05/2021",
-      "voto_restaurante": "Subway"
+      "voto_restaurante": "Mc Donald's"
     },
     {
       "id": 4,
@@ -139,10 +139,10 @@
   "votacao": [],
   "historico": [
     {
-      "data_almoco": "31/05/2021",
+      "data_almoco": "22/05/2021",
       "vencedor_nome": "Mc Donald's",
       "vencedor_id": 1,
-      "id": 1
+      "id": 8
     },
     {
       "data_almoco": "30/05/2021",
@@ -191,6 +191,12 @@
       "vencedor_nome": "Madero",
       "vencedor_id": 25,
       "id": 7
+    },
+    {
+      "data_almoco": "31/05/2021",
+      "vencedor_nome": "K-Recão Lanches",
+      "vencedor_id": 15,
+      "id": 9
     }
   ]
 }
