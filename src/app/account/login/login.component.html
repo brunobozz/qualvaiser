@@ -1,8 +1,15 @@
-<section class="login d-flex justify-content-center align-items-center">
+<section
+  class="
+    login
+    d-flex
+    flex-column
+    justify-content-center
+    align-items-center
+    bg-primary
+  "
+>
+  <h1 class="mb-4 text-light">Entrar</h1>
   <div class="card">
-    <div class="card-header bg-primary text-light text-center">
-      <h4>Login</h4>
-    </div>
     <div class="card-body">
       <form #login="ngForm" (ngSubmit)="validaLogin(login.value)">
         <div class="mb-3">
@@ -29,6 +36,7 @@
             ngModel
           />
         </div>
+        <p *ngIf="mErro" class="alert alert-danger">{{ mErro }}</p>
         <div class="text-end">
           <button
             type="submit"

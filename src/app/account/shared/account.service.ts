@@ -1,16 +1,23 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AccountService {
+  constructor() {}
 
-  constructor() { }
-
-  login(user: any){
-    return new Promise((resolve)=> {
-      window.localStorage.setItem('token', 'meu-token');
+  login(user: any) {
+    return new Promise((resolve) => {
+      window.localStorage.setItem('token', user.tipo);
+      window.localStorage.setItem('user', user.nome);
       resolve(true);
-    })
+    });
+  }
+
+  logout() {
+    return new Promise((resolve) => {
+      window.localStorage.setItem('token', '');
+      resolve(true);
+    });
   }
 }

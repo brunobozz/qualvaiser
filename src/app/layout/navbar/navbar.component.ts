@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AccountService } from 'src/app/account/shared/account.service';
 import { MenuComponent } from '../menu/menu.component';
 
 @Component({
@@ -9,15 +11,27 @@ import { MenuComponent } from '../menu/menu.component';
 export class NavbarComponent implements OnInit {
   @Input()
   menu: MenuComponent = new MenuComponent();
+  public userName = window.localStorage.getItem('user');
+  public userTipo = window.localStorage.getItem('token');
 
   isOpen: boolean = false;
 
-  constructor() {}
+  constructor(private accountService: AccountService, private router: Router) {}
 
   ngOnInit(): void {}
 
   toggleMenu() {
     this.menu.toggleMenu();
     this.isOpen = !this.isOpen;
+  }
+
+  async logout() {
+    try {
+      const result = await this.accountService.logout();
+      console.log('Logout efetuado: ' + result);
+      this.router.navigate(['login']);
+    } catch (error) {
+      console.log(error);
+    }
   }
 }

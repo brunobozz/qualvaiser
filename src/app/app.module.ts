@@ -26,6 +26,7 @@ import { PageUsuariosComponent } from './pages/page-usuarios/page-usuarios.compo
 //SERVICES
 import { ApiLocalService } from './services/local-api/api-local.service';
 import { LoginComponent } from './account/login/login.component';
+import { AccountService } from './account/shared/account.service';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,7 @@ import { LoginComponent } from './account/login/login.component';
       autoDismiss: true,
     }),
   ],
-  providers: [ApiLocalService],
+  providers: [ApiLocalService, AccountService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
