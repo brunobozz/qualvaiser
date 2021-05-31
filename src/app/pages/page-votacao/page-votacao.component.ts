@@ -18,6 +18,8 @@ export class PageVotacaoComponent implements OnInit {
     'userVotoRestaurante'
   );
   public today: string = '';
+  public primeiroDia: string = '';
+  public ultimoDia: string = '';
 
   constructor(
     private localApi: ApiLocalService,
@@ -26,18 +28,31 @@ export class PageVotacaoComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    let hoje = new Date();
-    hoje.setDate(hoje.getDate());
-    this.today = hoje.toLocaleDateString();
-
+    this.dia();
+    this.semana();
     this.getHistorico();
     this.getRestaurantes();
     this.getVotacao();
   }
 
+  private dia() {
+    let hoje = new Date();
+    hoje.setDate(hoje.getDate());
+    this.today = hoje.toLocaleDateString();
+  }
+
+  private semana() {
+    let data = new Date();
+    let primeiro = data.getDate() - data.getDay();
+    this.primeiroDia = new Date(data.setDate(primeiro)).toLocaleDateString();
+    this.ultimoDia = new Date(
+      data.setDate(data.getDate() + 6)
+    ).toLocaleDateString();
+  }
+
   private getRestaurantes() {
     this.localApi.getInfo('restaurantes').subscribe((data) => {
-      this.RESTAURANTES = data.filter((data1: { id: any; }) => {
+      this.RESTAURANTES = data.filter((data1: { id: any }) => {
         return !this.HISTORICO.some((data2) => {
           return data1.id === data2.vencedor_id;
         });
@@ -47,7 +62,9 @@ export class PageVotacaoComponent implements OnInit {
 
   private getHistorico() {
     this.localApi.getInfo('historico').subscribe((data) => {
-      this.HISTORICO = data;
+      this.HISTORICO = data.filter((data1: { data_almoco: string }) => {
+        return data1.data_almoco >= this.primeiroDia;
+      });
     });
   }
 

@@ -1,12 +1,41 @@
 <section class="m-4">
-  <div class="card">
-    <div class="card-header">
-      
-      <h2>Vamos Almoçar?</h2>
-    </div>
-    <div class="card-body">
-      <p>Você ainda não votou hoje! Vote no restaurante que você quer almoçar hoje!</p>
-      <button class="btn btn-primary" routerLink="/votacao">Votar agora</button>
-    </div>
+  <div
+    *ngIf="userVotoData != today"
+    class="card p-4 text-center bg-info text-light"
+  >
+    <h2>Vamos Almoçar?</h2>
+    <p>
+      Você ainda não votou e ainda da tempo!<br />Vote no restaurante que você
+      quer almoçar hoje.
+    </p>
+    <button class="btn btn-secondary m-auto" routerLink="/votacao">
+      Votar agora
+    </button>
   </div>
+  <div
+    *ngIf="userVotoData === today"
+    class="card p-4 text-center bg-success text-light"
+  >
+    <h2>Parabéns!</h2>
+    <p class="fs-5">
+      Você votou no restaurante
+      <span class="fw-bold">{{ userVotoRestaurante }}</span
+      >.<br />Agora é só torcer e se preparar para o almoço!
+    </p>
+  </div>
+
+  <h4 class="mt-4">Restaurantes Escolhidos da Semana</h4>
+  <p>Estes restaurantes não podem ser votados pois já foram escolhidos esta semana.</p>
+  <small>Semana: de <span class="fw-bold">{{ primeiroDia }}</span> até <span class="fw-bold">{{ ultimoDia }}</span></small>
+  <ul class="list-group">
+    <li
+      *ngFor="let item of HISTORICO | orderBy: 'data':true"
+      class="list-group-item d-flex justify-content-between align-items-center"
+    >
+      <div class="ms-2 me-auto">
+        <span>{{ item.data_almoco }} - </span>
+        <span class="fw-bold">{{ item.vencedor_nome }}</span>
+      </div>
+    </li>
+  </ul>
 </section>

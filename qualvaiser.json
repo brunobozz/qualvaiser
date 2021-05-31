@@ -6,8 +6,8 @@
       "tipo": "adm",
       "email": "brunobozz@gmail.com",
       "senha": "12345",
-      "voto_data": "30/05/2021",
-      "voto_restaurante": "Mc Donald's"
+      "voto_data": "31/05/2021",
+      "voto_restaurante": "Subway"
     },
     {
       "id": 1,
@@ -136,73 +136,61 @@
       "id": 25
     }
   ],
-  "votacao": [
+  "votacao": [],
+  "historico": [
     {
-      "id_restaurante": 1,
-      "nome": "Mc Donald's",
-      "votos": 7,
+      "data_almoco": "31/05/2021",
+      "vencedor_nome": "Mc Donald's",
+      "vencedor_id": 1,
       "id": 1
     },
     {
-      "id_restaurante": 2,
-      "nome": "Xis do Lelê",
-      "votos": 1,
+      "data_almoco": "30/05/2021",
+      "vencedor_nome": "Outback",
+      "vencedor_id": 5,
+      "id": 1
+    },
+    {
+      "data_almoco": "29/05/2021",
+      "vencedor_nome": "Pizza da Nona",
+      "vencedor_id": 13,
+      "id": 0
+    },
+    {
+      "data_almoco": "28/05/2021",
+      "vencedor_nome": "Habbibs",
+      "vencedor_id": 16,
       "id": 2
     },
     {
-      "id_restaurante": 4,
-      "nome": "Restaurante da Colônia",
-      "votos": 1,
+      "data_almoco": "27/05/2021",
+      "vencedor_nome": "Espaço Maestro",
+      "vencedor_id": 11,
       "id": 3
     },
     {
-      "id_restaurante": 7,
-      "nome": "Subway",
-      "votos": 1,
+      "data_almoco": "26/05/2021",
+      "vencedor_nome": "Burger King",
+      "vencedor_id": 12,
       "id": 4
     },
     {
-      "id_restaurante": 15,
-      "nome": "K-Recão Lanches",
-      "votos": 2,
-      "id": 5
-    }
-  ],
-  "historico": [
-    {
-      "data": "30/05/2021",
-      "vencedor_nome": "Outback",
-      "vencedor_id": 5
-    },
-    {
-      "data": "29/05/2021",
-      "vencedor_nome": "Pizza da Nona",
-      "vencedor_id": 13
-    },
-    {
-      "data": "28/05/2021",
-      "vencedor_nome": "Habbibs",
-      "vencedor_id": 16
-    },
-    {
-      "data": "27/05/2021",
-      "vencedor_nome": "Espaço Maestro",
-      "vencedor_id": 11
-    },
-    {
-      "data": "26/05/2021",
-      "vencedor_nome": "Burger King",
-      "vencedor_id": 12
-    },
-    {
-      "data": "25/05/2021",
+      "data_almoco": "25/05/2021",
       "vencedor_nome": "Mama Mia",
-      "vencedor_id": 10
+      "vencedor_id": 10,
+      "id": 5
     },
     {
-      "data": "24/05/2021",
+      "data_almoco": "24/05/2021",
       "vencedor_nome": "Cenoura Pasteis",
-      "vencedor_id": 14
+      "vencedor_id": 14,
+      "id": 6
+    },
+    {
+      "data_almoco": "23/05/2021",
+      "vencedor_nome": "Madero",
+      "vencedor_id": 25,
+      "id": 7
     }
   ]
 }
